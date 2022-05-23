@@ -18,7 +18,7 @@ const personalMovvieDB = {
 
 function remeberMyFilms(){
     for(let i = 0; i < 2; i++){
-        const a = prompt('Один из просмотреных фильмов?', ''),
+        const a = prompt('Один из просмотреных фильмов?', '').trim(),
                  b = prompt('Насколько оцениваете его?', '');
     
         if (a != null && b != null && a != '' && b != '' && a.length < 50){
@@ -32,7 +32,7 @@ function remeberMyFilms(){
        
 }
 
-// remeberMyFilms();
+ remeberMyFilms();
 
 function detectPersonalLevel(){
     if (personalMovvieDB.count < 10){
@@ -46,7 +46,7 @@ function detectPersonalLevel(){
     }
 }
 
-// detectPersonalLevel();
+detectPersonalLevel();
 
 function showMyDB(hidden){
      if  (!hidden){
@@ -64,4 +64,3 @@ function writeYourGeners(){
 
 writeYourGeners();
 
-console.log(personalMovvieDB);
